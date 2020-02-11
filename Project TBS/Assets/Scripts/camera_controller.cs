@@ -11,6 +11,7 @@ public class camera_controller : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        cam.orthographicSize = 5;
         Vector3 pos = new Vector3(0, 10, 0);
         cam.transform.position = pos;
         cam.transform.LookAt(new Vector3(5, 0, 5));
@@ -19,7 +20,7 @@ public class camera_controller : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (must_move) {
-            lerp_coef += 0.1f;
+            lerp_coef += 0.0005f;
 
             GoToDestination(destination, lerp_coef);
             if (lerp_coef >= 1) {
@@ -27,15 +28,6 @@ public class camera_controller : MonoBehaviour {
                 must_move = false;
             }
         }
-
-        // SetCameraToCenter(m_variateurTestX, m_variateurTestY, m_variateurTestZ);
-    }
-
-    public void SetCameraToCenter(float x, float y, float z = 0) {
-        Vector3 center_of_terrain = new Vector3(x, z, y);
-        Vector3 camera_pos = new Vector3(x / 2, 10, y / 2);
-        cam.transform.position = camera_pos;
-        cam.transform.LookAt(center_of_terrain);
     }
 
     public void MoveTo(Vector3 destination) {
@@ -45,5 +37,10 @@ public class camera_controller : MonoBehaviour {
 
     public void GoToDestination(Vector3 destination, float lerp_coef) {
         transform.position = Vector3.Lerp(transform.position, destination, lerp_coef);
+    }
+
+    public void ChangeOrthographicSize(int direction) {
+        if ((direction < 0 && cam.orthographicSize > 5) || (direction > 0 && cam.orthographicSize < 20))
+            cam.orthographicSize += direction * 5;
     }
 }

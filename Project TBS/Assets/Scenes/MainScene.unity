@@ -131,6 +131,8 @@ GameObject:
   m_Component:
   - component: {fileID: 698008074}
   - component: {fileID: 698008073}
+  - component: {fileID: 698008075}
+  - component: {fileID: 698008076}
   m_Layer: 0
   m_Name: Engine
   m_TagString: Untagged
@@ -166,6 +168,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &698008075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698008072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b60640152a9a664f9dc1dceefe61b18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &698008076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698008072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211031a82d574be44817060dc6b7f91e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 762418344}
 --- !u!1 &762418342
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +379,7 @@ GameObject:
   - component: {fileID: 1208793331}
   - component: {fileID: 1208793332}
   m_Layer: 0
-  m_Name: map
+  m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -385,5 +412,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tile: {fileID: 8020488775144758604, guid: 5c6a43200bf9a224caffce48ed903cfa, type: 3}
-  size_x: 25
-  size_y: 10
+  size_x: 15
+  size_y: 15
+  min_size_z: -3
+  max_size_z: 2
+  simple_coef_0: 0.05
+  simple_coef_1: 0.97
+  multiple_coef_0: 0.1
+  multiple_coef_1: 0.2
+  multiple_coef_2: 0.3
+  multiple_coef_3: 0.4
+  multiple_coef_4: 0.7
