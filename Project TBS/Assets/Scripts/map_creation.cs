@@ -38,7 +38,8 @@ public class map_creation : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        GameObject.Find("Engine").GetComponent<camera_controller>().MoveTo(new Vector3(-size_x / 4, 0, -size_y / 4));
+        GameObject.Find("Engine").GetComponent<camera_controller>().MoveTo(new Vector3(0, 15, 0));
+        GameObject.Find("Engine").GetComponent<camera_controller>().SetFocusPoint(new Vector3(size_x / 2, 0, size_y / 2));
     }
 
     // Update is called once per frame
