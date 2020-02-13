@@ -456,8 +456,8 @@ MonoBehaviour:
   m_tile: {fileID: 8020488775144758604, guid: 5c6a43200bf9a224caffce48ed903cfa, type: 3}
   size_x: 10
   size_y: 10
-  min_size_z: -2
-  max_size_z: 1
+  min_size_z: -4
+  max_size_z: 5
   simple_coef_0: 0.1
   simple_coef_1: 0.9
   multiple_coef_0: 0.1

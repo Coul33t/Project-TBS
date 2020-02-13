@@ -14,8 +14,8 @@ public class camera_controller : MonoBehaviour {
 
     private float lerp_coef_mov = 0;
     private float lerp_coef_rot = 0;
-    private float mov_duration = 1;
-    private float rot_duration = 1;
+    private float mov_duration = 2;
+    private float rot_duration = 2;
     private float mov_start_time = -1;
     private float rot_start_time = -1;
     private float mov_progress = 0;
@@ -124,7 +124,7 @@ public class camera_controller : MonoBehaviour {
         Vector3 final_position = Vector3.Scale(new_coordinates, size);
         Vector3 final_rotation = this.rotation.eulerAngles;
 
-        final_rotation.y -= 90;
+        final_rotation.y  -= 90;
         if (direction < 0)
             final_rotation.y += 2 * 90;
 

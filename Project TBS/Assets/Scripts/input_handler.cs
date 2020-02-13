@@ -29,14 +29,15 @@ public class input_handler : MonoBehaviour {
             GameObject.Find("Engine").GetComponent<camera_controller>().ChangeOrthographicSize(zoom_direction);
 
 
-        if (Input.GetKeyDown("a"))
+        if (Input.GetKeyDown("a")) {
             if (!(GameObject.Find("Engine").GetComponent<camera_controller>().must_rotate || GameObject.Find("Engine").GetComponent<camera_controller>().must_move))
                 GameObject.Find("Engine").GetComponent<camera_controller>().rotate(-1);
+        }
 
-        else if (Input.GetKeyDown("e"))
+        else if (Input.GetKeyDown("e")) {
             if (!(GameObject.Find("Engine").GetComponent<camera_controller>().must_rotate || GameObject.Find("Engine").GetComponent<camera_controller>().must_move))
                 GameObject.Find("Engine").GetComponent<camera_controller>().rotate(1);
-
+        }
 
     }
 }
